@@ -6,123 +6,118 @@ El streaming permite transmitir audio o vídeo en tiempo real sin necesidad de d
 # Descarga Directa vs Streaming
 
 ## Descarga directa
-- El usuario solicita un archivo completo (ej. 100 MB).
-- El servidor envía el fichero entero aunque el usuario no lo consuma.
-- Se almacena localmente.
-- Ineficiente en ancho de banda.
+- El usuario solicita un archivo completo (ej. 100 MB).  
+- El servidor envía el fichero entero aunque el usuario no lo consuma.  
+- Se almacena localmente.  
+- Ineficiente en ancho de banda.  
 
 ## Streaming
-- El servidor envía datos en flujo continuo.
-- No hay almacenamiento permanente.
-- Solo se transmite lo que el usuario consume.
-- Eficiente y adecuado para tiempo real.
+- El servidor envía datos en flujo continuo.  
+- No hay almacenamiento permanente.  
+- Solo se transmite lo que el usuario consume.  
+- Eficiente y adecuado para tiempo real.  
 
 # Topologías de Red
 
 ## Unicast
-- Conexión 1 a 1.
-- Si hay 100 oyentes → 100 flujos independientes.
-- **BW total = BW stream × Nº usuarios**
-- Poco escalable.
+- Conexión 1 a 1.  
+- Si hay 100 oyentes → 100 flujos independientes.  
+- **BW total = BW stream × Nº usuarios**  
+- Poco escalable.  
 
 ## Multicast
-- El servidor envía un único flujo a una dirección multicast (224.0.0.0–239.255.255.255).
-- Los routers replican solo si hay suscriptores.
-- Limitado a redes internas (muchos routers bloquean multicast).
+- El servidor envía un único flujo a una dirección multicast (224.0.0.0–239.255.255.255).  
+- Los routers replican solo si hay suscriptores.  
+- Limitado a redes internas (muchos routers bloquean multicast).  
 
 # Capa de Transporte: TCP vs UDP
 
 ## TCP
-- Fiable: retransmite paquetes perdidos.
-- Compatible con firewalls, NAT y proxies.
-- Mayor latencia.
+- Fiable: retransmite paquetes perdidos.  
+- Compatible con firewalls, NAT y proxies.  
+- Mayor latencia.  
 
 ## UDP
-- No hay retransmisión.
-- Latencia mínima.
-- Puede perder calidad si hay paquetes perdidos.
+- No hay retransmisión.  
+- Latencia mínima.  
+- Puede perder calidad si hay paquetes perdidos.  
 
 # QoS: Jitter y Buffer
 
 ## Jitter
 Variación en el tiempo de llegada de los paquetes.  
-Si el jitter supera el tamaño del buffer → cortes en el audio.
+Si el jitter supera el tamaño del buffer → cortes en el audio.  
 
 ## Buffer
-Memoria temporal que almacena segundos de audio/vídeo.
-- Más buffer → más estabilidad.
-- Más buffer → más latencia.
+Memoria temporal que almacena segundos de audio/vídeo.  
+- Más buffer → más estabilidad.  
+- Más buffer → más latencia.  
 
 ## Burst-on-Connect
-- El servidor envía una ráfaga inicial (ej. 64 KB a 10× velocidad).
-- El buffer del cliente se llena casi instantáneamente.
-- Reduce el *time-to-first-byte*.
+- El servidor envía una ráfaga inicial (ej. 64 KB a 10× velocidad).  
+- El buffer del cliente se llena casi instantáneamente.  
+- Reduce el *time-to-first-byte*.  
 
 # Protocolos de Streaming
 
 ## Capa de transporte
-- TCP: calidad y compatibilidad.
-- UDP: mínima latencia.
+- TCP: calidad y compatibilidad.  
+- UDP: mínima latencia.  
 
 ## Capa de aplicación
 
 ### 1. HTTP Legacy (ICY – Icecast2)
-- Conexión TCP continua.
-- El servidor envía bytes sin parar.
-- Puertos típicos: 80, 443, 8000.
-- Formatos: MP3, OGG, AAC.
+- Conexión TCP continua.  
+- El servidor envía bytes sin parar.  
+- Puertos típicos: 80, 443, 8000.  
+- Formatos: MP3, OGG, AAC.  
 
 ### 2. HTTP Adaptativo (HLS / MPEG-DASH)
-- El vídeo se divide en *chunks* de 2–10 segundos.
-- El cliente elige la calidad según su ancho de banda.
-- Formatos: `.ts`, `.m4s`.
-- Excelente para CDN.
+- El vídeo se divide en *chunks* de 2–10 segundos.  
+- El cliente elige la calidad según su ancho de banda.  
+- Formatos: `.ts`, `.m4s`.  
+- Excelente para CDN.  
 
 # Icecast2
 
-Icecast2 es un servidor de streaming de código abierto que actúa como una “antena virtual”.  
+Icecast2 es un servidor de streaming de código abierto que actúa como una “antena virtual”.    
 Recibe audio de una fuente (Mixxx, Butt, etc.) y lo distribuye a múltiples oyentes.
 
 ### Características:
-- Formatos: MP3, OGG.
-- Gestión de oyentes.
-- Puntos de montaje (ej. `/radio-asir`, `/radio-smr`).
-- Compatible con navegadores, VLC y apps móviles.
+- Formatos: MP3, OGG.  
+- Gestión de oyentes.  
+- Puntos de montaje (ej. `/radio-asir`, `/radio-smr`). 
+- Compatible con navegadores, VLC y apps móviles.  
 
 # Códecs de Audio
 
 ## Códecs con pérdida
-- Eliminan información imperceptible.
-- Muy eficientes.
-- Ejemplos: MP3, AAC, Vorbis.
+- Eliminan información imperceptible.  
+- Muy eficientes.  
+- Ejemplos: MP3, AAC, Vorbis.  
 
 ## Códecs sin pérdida
-- No eliminan información.
-- Menor compresión.
-- Ejemplos: FLAC, WAV.
+- No eliminan información.  
+- Menor compresión.  
+- Ejemplos: FLAC, WAV.  
 
 # 8. Parámetros de Audio
 
 ## Frecuencia de muestreo
-- “Fotos” por segundo de la onda.
-- Estándar: **44.1 kHz**.
+- “Fotos” por segundo de la onda.  
+- Estándar: **44.1 kHz**.  
 
 ## Profundidad de bits
-- Calidad de cada muestra.
-- Estándar: **16 bits (CD)**.
+- Calidad de cada muestra.  
+- Estándar: **16 bits (CD)**. 
 
 ## Canales
-- Mono, Estéreo, 5.1, etc.
+- Mono, Estéreo, 5.1, etc.  
 
 # Vídeo
 
 ## Contenedor
-Formato que agrupa:
-- Vídeo
-- Audio
-- Subtítulos
-- Metadatos
-  
+Formato que agrupa: Vídeo, Audio, Subtítulos y Metadatos  
 Ejemplos: MP4, MKV, MOV, OGG.
 
 # FORMULAS
@@ -131,7 +126,7 @@ Cálculo de Peso (Audio)
 
 ### Fórmula:Peso = Frecuencia × Bits × Canales × Segundos
 
-Ejemplo WAV sin compresión (3 min, 44.1 kHz, 16 bit, estéreo):  
+Ejemplo WAV sin compresión (3 min, 44.1 kHz, 16 bit, estéreo):    
 ≈ **31.75 MB**
 
 ## Cálculo de peso sin compresión: Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
