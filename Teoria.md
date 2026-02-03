@@ -5,13 +5,13 @@ El streaming permite transmitir audio o vídeo en tiempo real sin necesidad de d
 
 # Descarga Directa vs Streaming
 
-## Descarga directa
+### Descarga directa
 - El usuario solicita un archivo completo (ej. 100 MB).  
 - El servidor envía el fichero entero aunque el usuario no lo consuma.  
 - Se almacena localmente.  
 - Ineficiente en ancho de banda.  
 
-## Streaming
+### Streaming
 - El servidor envía datos en flujo continuo.  
 - No hay almacenamiento permanente.  
 - Solo se transmite lo que el usuario consume.  
@@ -19,60 +19,60 @@ El streaming permite transmitir audio o vídeo en tiempo real sin necesidad de d
 
 # Topologías de Red
 
-## Unicast
+### Unicast
 - Conexión 1 a 1.  
 - Si hay 100 oyentes → 100 flujos independientes.  
 - **BW total = BW stream × Nº usuarios**  
 - Poco escalable.  
 
-## Multicast
+### Multicast
 - El servidor envía un único flujo a una dirección multicast (224.0.0.0–239.255.255.255).  
 - Los routers replican solo si hay suscriptores.  
 - Limitado a redes internas (muchos routers bloquean multicast).  
 
 # Capa de Transporte: TCP vs UDP
 
-## TCP
+### TCP
 - Fiable: retransmite paquetes perdidos.  
 - Compatible con firewalls, NAT y proxies.  
 - Mayor latencia.  
 
-## UDP
+### UDP
 - No hay retransmisión.  
 - Latencia mínima.  
 - Puede perder calidad si hay paquetes perdidos.  
 
 # QoS: Jitter y Buffer
 
-## Jitter
+### Jitter
 Variación en el tiempo de llegada de los paquetes.  
 Si el jitter supera el tamaño del buffer → cortes en el audio.  
 
-## Buffer
+### Buffer
 Memoria temporal que almacena segundos de audio/vídeo.  
 - Más buffer → más estabilidad.  
 - Más buffer → más latencia.  
 
-## Burst-on-Connect
+### Burst-on-Connect
 - El servidor envía una ráfaga inicial (ej. 64 KB a 10× velocidad).  
 - El buffer del cliente se llena casi instantáneamente.  
 - Reduce el *time-to-first-byte*.  
 
 # Protocolos de Streaming
 
-## Capa de transporte
+### Capa de transporte
 - TCP: calidad y compatibilidad.  
 - UDP: mínima latencia.  
 
-## Capa de aplicación
+### Capa de aplicación
 
-### 1. HTTP Legacy (ICY – Icecast2)
+**HTTP Legacy (ICY – Icecast2)**
 - Conexión TCP continua.  
 - El servidor envía bytes sin parar.  
 - Puertos típicos: 80, 443, 8000.  
 - Formatos: MP3, OGG, AAC.  
 
-### 2. HTTP Adaptativo (HLS / MPEG-DASH)
+**HTTP Adaptativo (HLS / MPEG-DASH)**
 - El vídeo se divide en *chunks* de 2–10 segundos.  
 - El cliente elige la calidad según su ancho de banda.  
 - Formatos: `.ts`, `.m4s`.  
@@ -89,47 +89,62 @@ Recibe audio de una fuente (Mixxx, Butt, etc.) y lo distribuye a múltiples oyen
 - Puntos de montaje (ej. `/radio-asir`, `/radio-smr`). 
 - Compatible con navegadores, VLC y apps móviles.  
 
-# Códecs de Audio
+## Códecs de Audio
 
-## Códecs con pérdida
+### Códecs con pérdida
 - Eliminan información imperceptible.  
 - Muy eficientes.  
 - Ejemplos: MP3, AAC, Vorbis.  
 
-## Códecs sin pérdida
+### Códecs sin pérdida
 - No eliminan información.  
 - Menor compresión.  
 - Ejemplos: FLAC, WAV.  
 
-# Parámetros de Audio
+## Parámetros de Audio
 
-## Frecuencia de muestreo
+### Frecuencia de muestreo
 - “Fotos” por segundo de la onda.  
 - Estándar: **44.1 kHz**.  
 
-## Profundidad de bits
+### Profundidad de bits
 - Calidad de cada muestra.  
 - Estándar: **16 bits (CD)**. 
 
-## Canales
+### Canales
 - Mono, Estéreo, 5.1, etc.  
 
 # Vídeo
 
-## Contenedor
+### Contenedor
 Formato que agrupa: Vídeo, Audio, Subtítulos y Metadatos  
 Ejemplos: MP4, MKV, MOV, OGG.
 
+
 # FORMULAS
 
-Cálculo de Peso (Audio)
+### Cálculo de Peso (Audio sin compresión) --> WAC 
+**Fórmula: Peso = Frecuencia × Bits × Canales × Segundos**  
+*Frecuencia → Hz (44 100, 48 000…)  
+*Bits → profundidad (16, 24…)  
+*Canales → 1 mono, 2 estéreo  
+*Segundos → duración total  
 
-### Fórmula:Peso = Frecuencia × Bits × Canales × Segundos
+### Cálculo de Peso (Audio con compresión) --> MP3, AAC...
+**Peso = Bitrate × Tiempo**  
+
+**Para pasar a bytes:**     
+Bytes = Bits 8  
+
+**Para pasar a MB:**  
+MB = Bytes 10 6  
 
 Ejemplo WAV sin compresión (3 min, 44.1 kHz, 16 bit, estéreo):    
 ≈ **31.75 MB**
 
 ## Cálculo de peso sin compresión: Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
 ## Con compresión: Peso = Bitrate × Tiempo
+
+
 
 
