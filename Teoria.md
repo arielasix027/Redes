@@ -123,6 +123,12 @@ Ejemplos: MP4, MKV, MOV, OGG.
 
 # FORMULAS
 
+**Para pasar a bytes:**     
+Bytes = Bits 8  
+
+**Para pasar a MB:**  
+MB = Bytes 10 6  
+
 ### Cálculo de Peso (Audio sin compresión) --> WAC 
 **Fórmula: Peso = Frecuencia × Bits × Canales × Segundos**  
 *Frecuencia → Hz (44 100, 48 000…)  
@@ -130,21 +136,60 @@ Ejemplos: MP4, MKV, MOV, OGG.
 *Canales → 1 mono, 2 estéreo  
 *Segundos → duración total  
 
-### Cálculo de Peso (Audio con compresión) --> MP3, AAC...
-**Peso = Bitrate × Tiempo**  
+### Cálculo de Peso (Audio con compresión) --> MP3, AAC...    
+**Fórmula: Peso = Bitrate × Tiempo**  
+*Bitrate → en bits/s (ej: 128 kbps = 128 000 bits/s)  
+*Tiempo → en segundos  
 
-**Para pasar a bytes:**     
-Bytes = Bits 8  
+### Cálculo de Peso (Video sin compresión) --> RAW  
+**Fórmula: Peso (bits) = (Ancho × Alto) × Profundidad × FPS × Tiempo**    
+*Ancho × Alto → resolución (ej: 1920×1080)  
+*Profundidad → bits por pixel (24 bits = RGB 8+8+8)  
+*FPS → frames por segundo  
+*Tiempo → segundos  
 
-**Para pasar a MB:**  
-MB = Bytes 10 6  
+### Cálculo de Peso (Video con compresión) --> H.264, H.265…
+**Fórmula: Peso = Bitrate × Tiempo**  
+Igual que en audio comprimido.  
 
-Ejemplo WAV sin compresión (3 min, 44.1 kHz, 16 bit, estéreo):    
-≈ **31.75 MB**
+### ANCHO DE BANDA TOTAL (STREAMING)
+**Fórmula: BW_total = Bitrate_stream × Número_de_usuarios**    
+Ejemplo:128 kbps × 25 usuarios = 3.2 Mbps  
 
-## Cálculo de peso sin compresión: Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
-## Con compresión: Peso = Bitrate × Tiempo
+### CÁLCULO DE USUARIOS MÁXIMOS
+**Fórmula: Usuarios = BW_disponible / Bitrate_por_usuario**      
+Si hay límite del 80%: 𝐵 𝑊 𝑢 𝑠 𝑎 𝑏 𝑙 𝑒 = 𝐵 𝑊 𝑡 𝑜 𝑡 𝑎 𝑙 × 0.8  
 
+### CONVERSIONES IMPRESCINDIBLES
+**Fórmula: Peso = Bitrate × Tiempo**  
 
+**Unidades de almacenamiento**  
+*1 byte = 8 bits 
+*1 KB = 10 3 bytes  
+*1 MB = 10 6 bytes  
+*1 GB = 10 9 bytes  
+*1 TB = 10 12 bytes  
 
+**Unidades de velocidad**  
+1 kbps = 10 3 bits/s  
+1 Mbps = 10 6 bits/s  
+1 Gbps = 10 9 bits/s  
 
+**Conversión rápida**  
+*MB → bits: × 8 × 10 6  
+*GB → bits: × 8 × 10 9  
+*kbps → Mbps: ÷ 1000  
+*Segundos → horas: ÷ 3600  
+
+### CÁLCULO DE PORCENTAJE DE USO DE LÍNEA
+**Fórmula: Pixels_por_frame = Ancho × Alto**  
+Ejemplo: 6 Mbps en una línea de 20 Mbps → ( 6 / 20 ) × 100 = 30 %  
+
+### CÁLCULO DE RESOLUCIÓN
+**Fórmula: Porcentaje = (Bitrate / Capacidad_total) × 100**
+
+### CÁLCULO DE BITRATE (AUDIO RAW)  
+
+Bitrate de un audio sin comprimir:   
+**Fórmula:Bitrate = Frecuencia × Bits × Canales**   
+Ejemplo: 48 000 × 24 × 1 = 1 152 000 bits/s = 1.152 Mbps  
