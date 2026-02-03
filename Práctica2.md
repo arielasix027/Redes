@@ -46,7 +46,7 @@ Reproduce ambos vídeos a la vez. Pon pausa en una escena con mucho movimiento.
 H.264 muestra más artefactos ya que HEVC es un códec más moderno y eficiente.  
 
 ● Si ambos tienen el mismo bitrate (2 Mbps), ¿pesan lo mismo los archivos finales?  
-No tiene porque, aunque uses -b:v 2M el bitrate objetivo es 2 Mbps  
+No tiene por que, aunque uses -b:v 2M el bitrate objetivo es 2 Mbps  
 H.264 y H.265 no alcanzan exactamente el mismo bitrate real.  
 
 ### Preguntas finales:
@@ -61,7 +61,7 @@ Paso 1: Pasar 500 GB a bits
 
 Paso 2: Usar el bitrate de 2 Mbps  
 2 Mbps = 2 × 10^6 bits/s  
-Tiempo en segundos = 4 × 10^12 bits 2 × 10^6 bits/s = 2 × 10^6s  
+Tiempo en segundos = (4 × 10^12 bits) / (2 × 10^6 bits/s) = 2 × 10^6s  
 
 Paso 3: Pasar segundos a horas  
 Horas=2×106s3600s/h --> 555.6h  
