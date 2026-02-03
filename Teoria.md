@@ -121,13 +121,15 @@ Formato que agrupa: Vídeo, Audio, Subtítulos y Metadatos
 Ejemplos: MP4, MKV, MOV, OGG.
 
 
+
 # FORMULAS
 
 **Para pasar a bytes:**     
-Bytes = Bits 8  
+Bytes = Bits / 8  
 
-**Para pasar a MB:**  
-MB = Bytes 10 6  
+**Para pasar a MB y GB:**  
+MB = Bytes / 10^6
+GB = Bytes / 10^9
 
 ### Cálculo de Peso (Audio sin compresión) --> WAC 
 **Fórmula: Peso = Frecuencia × Bits × Canales × Segundos**  
@@ -142,7 +144,9 @@ MB = Bytes 10 6
 *Tiempo → en segundos  
 
 ### Cálculo de Peso (Video sin compresión) --> RAW  
-**Fórmula: Peso (bits) = (Ancho × Alto) × Profundidad × FPS × Tiempo**    
+**Fórmula: Peso(bits) = (Ancho × Alto) × Profundidad × FPS × Tiempo**  
+**Bitrate = (Ancho × Alto) × Profundidad × FPS**  
+**Peso = Bitrate × Tiempo**  
 *Ancho × Alto → resolución (ej: 1920×1080)  
 *Profundidad → bits por pixel (24 bits = RGB 8+8+8)  
 *FPS → frames por segundo  
@@ -182,11 +186,11 @@ Si hay límite del 80%: 𝐵 𝑊 𝑢 𝑠 𝑎 𝑏 𝑙 𝑒 = 𝐵 𝑊 𝑡
 *Segundos → horas: ÷ 3600  
 
 ### CÁLCULO DE PORCENTAJE DE USO DE LÍNEA
-**Fórmula: Pixels_por_frame = Ancho × Alto**  
+**Fórmula: Porcentaje = (Bitrate / Capacidad_total) × 100**  
 Ejemplo: 6 Mbps en una línea de 20 Mbps → ( 6 / 20 ) × 100 = 30 %  
 
 ### CÁLCULO DE RESOLUCIÓN
-**Fórmula: Porcentaje = (Bitrate / Capacidad_total) × 100**
+**Fórmula: Pixels_por_frame = Ancho × Alto**
 
 ### CÁLCULO DE BITRATE (AUDIO RAW)  
 
