@@ -1,6 +1,9 @@
 # Práctica de Vídeo (FFmpeg, códecs, remuxing, bitrate…)
 
-Paso 1 --> Instalamos icecast2
-![1](Imagenes/1.png)
+### Paso 1 --> Instalamos icecast2.
 
-Paso 2 -->
+Comando instalación --> sudo apt install icecast2 vlc
+
+![1](Imagenes/6.png)
+
+### Paso 2 --> Instalamos vlc.
