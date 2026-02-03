@@ -4,8 +4,9 @@
 
 ### Paso 1 --> Instalamos icecast2 y lo configuramos.
 
-sudo apt install icecast2
+Comando instalación --> sudo apt install icecast2
 
+Configuracion de las preferencias de Mixxx -->
 ![1](Imagenes/1.png)
 
 ### Paso 2 --> Comprobamos que el puerto 8000 mil este abierto para que el cliente pueda conectarse.
