@@ -131,7 +131,7 @@ Formato que agrupa:
 - Metadatos
 
 #PRACTICA 1
-![1](imágenes/1.png)
+![1](imagenes/1.png)
   
 Ejemplos: MP4, MKV, MOV, OGG.
 
