@@ -1,14 +1,16 @@
 # Práctica de Radio Online (Icecast + Mixxx)
 
-### Paso 0 --> Actualizamos el sistema y asignamos una ip fija.
+### Paso 0 --> Actualizamos el sistema y asignamos una ip si es necesario
 
-### Paso 1 --> Instalamos icecast2 y lo configuramos.
+### Paso 1 --> Instalamos icecast2 y lo configuramos
 
 Comando instalación --> sudo apt install icecast2
-
 Configuracion de las preferencias de Mixxx --> anexo
 
-### Paso 2 --> Comprobamos que el puerto 8000 mil este abierto para que el cliente pueda conectarse.
+### Paso 2 --> Comprobamos el puerto
+
+Comprobamos que el puerto 8000 mil este abierto para que el cliente pueda conectarse.
+ss -tulnp | grep 8000
 
 ### Paso 3 --> Instalamos Mixxx y lo configuramos la emision.
 
