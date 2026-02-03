@@ -9,7 +9,7 @@ Configuracion de las preferencias de Mixxx --> anexo
 
 ### Paso 2 --> Comprobamos el puerto
 
-Comprobamos que el puerto 8000 mil este abierto para que el cliente pueda conectarse.  
+Comprobamos que el puerto 8000 este abierto para que el cliente pueda conectarse.  
 ss -tulnp | grep 8000
 
 ### Paso 3 --> Instalamos Mixxx y lo configuramos la emision.
@@ -21,7 +21,7 @@ sudo apt install mixxx -y
 
 Desde la otra máquina, en este caso la maquina real, entramos en la url con la ip de la mv y con el puerto  correspondiente y la carpeta /ariel en este caso y vemos como se reproduce perfectamente el audio del icecast2.
 
-http://127.0.0.1:8000/video
+http://192.168.1.16:8000/video
 
 ## Anexo
 ![1](Imagenes/1.png)
