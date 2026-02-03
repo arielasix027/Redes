@@ -137,17 +137,4 @@ Ejemplo WAV sin compresión (3 min, 44.1 kHz, 16 bit, estéreo):
 ## Cálculo de peso sin compresión: Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
 ## Con compresión: Peso = Bitrate × Tiempo
 
-# PRÁCTICA RADIO
-
-Paso 1 --> Instalamos icecast2
-![1](Imagenes/1.png)
-
-Paso 2 -->
-
-# PRÁCTICA VIDEO
-
-Paso 1 --> Instalamos icecast2
-![1](Imagenes/1.png)
-
-Paso 2 -->
 
