@@ -101,7 +101,7 @@ Recibe audio de una fuente (Mixxx, Butt, etc.) y lo distribuye a múltiples oyen
 - Menor compresión.  
 - Ejemplos: FLAC, WAV.  
 
-# 8. Parámetros de Audio
+# Parámetros de Audio
 
 ## Frecuencia de muestreo
 - “Fotos” por segundo de la onda.  
