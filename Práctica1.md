@@ -1,23 +1,27 @@
 # Práctica de Radio Online (Icecast + Mixxx)
 
-## Paso 1 --> Instalamos icecast2 y lo configuramos.
+### Paso 0 --> Actualizamos el sistema y asignamos una ip fija.
 
-### sudo apt install icecast2
+### Paso 1 --> Instalamos icecast2 y lo configuramos.
+
+sudo apt install icecast2
 
 ![1](Imagenes/1.png)
 
-## Paso 2 --> Comprobamos que el puerto 8000 mil este abierto para que el cliente pueda conectarse.
+### Paso 2 --> Comprobamos que el puerto 8000 mil este abierto para que el cliente pueda conectarse.
 
-## Paso 3 --> Instalamos Mixxx y lo configuramos la emision.
+### Paso 3 --> Instalamos Mixxx y lo configuramos la emision.
 
-### sudo add-apt-repository ppa:mixxx/mixxx -y
-### sudo apt update
-### sudo apt install mixxx -y
+sudo add-apt-repository ppa:mixxx/mixxx -y
+sudo apt update
+sudo apt install mixxx -y
 
 ![1](Imagenes/2.png)
 ![1](Imagenes/3.png)
 ![1](Imagenes/4.png)
 
-## Paso 4 --> Desde la otra maquina, en este caso la maquina real no la virtual entramos en la url con la ip de la mv y con el puerto correspondiente y la carpeta /ariel en este caso y vemos como se reproduce perfectamente el audio del icecast2.
+### Paso 4 --> Comprobamos que funciona el audio desde la url en otra máquina.
+
+Desde la otra máquina, en este caso la maquina real, entramos en la url con la ip de la mv y con el puerto correspondiente y la carpeta /ariel en este caso y vemos como se reproduce perfectamente el audio del icecast2.
 
 ![1](Imagenes/5.png)
