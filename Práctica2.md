@@ -4,17 +4,13 @@
 
 Comando instalación --> sudo apt install icecast2 vlc
 
-![1](Imagenes/6.png)
-
 ### Paso 2 --> Analizar el vídeo con ffprobe
 
 ffprobe -v error -show_streams video.mp4
-![1](Imagenes/7.png)
 
 ### Paso 3 --> Remuxing: cambio de contenedor. De .mp4 a .mkv
 
 ffmpeg -i original.mp4 -c:v copy -c:a copy salida.mkv
-![1](Imagenes/8.png)
 
 a) ¿Ha cambiado el tamaño de forma significativa?
 No. El tamaño del archivo apenas cambia porque los datos de vídeo y audio se copian tal cual.
@@ -76,3 +72,9 @@ Usuarios = 80 Mbps 0.4 Mbps = 200
 Resultado: 200 usuarios simultáneos con el perfil Móvil de 400 kbps.
 
 ## Anexo
+![1](Imagenes/6.png)
+![1](Imagenes/7.png)
+![1](Imagenes/8.png)
+![1](Imagenes/9.png)
+![1](Imagenes/10.png)
+![1](Imagenes/11.png)
