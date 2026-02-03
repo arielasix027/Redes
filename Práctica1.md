@@ -21,7 +21,7 @@ sudo apt install mixxx -y
 
 Desde la otra máquina, en este caso la maquina real, entramos en la url con la ip de la mv y con el puerto  correspondiente y la carpeta /ariel en este caso y vemos como se reproduce perfectamente el audio del icecast2.
 
-http://192.168.1.16:8000/video
+http://192.168.1.16:8000/ariel
 
 ## Anexo
 ![1](Imagenes/1.png)
