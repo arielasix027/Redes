@@ -51,8 +51,7 @@ H.264 y H.265 no alcanzan exactamente el mismo bitrate real.
 
 ### Preguntas finales:
 
-### Almacenamiento: Si tu servidor tiene un disco de 500 GB, ¿cuántas horas de vídeo del
-### perfil "HD" (2 Mbps) podrías alojar?
+**Almacenamiento: Si tu servidor tiene un disco de 500 GB, ¿cuántas horas de vídeo del perfil "HD" (2 Mbps) podrías alojar?**
 
 Paso 1: Pasar 500 GB a bits  
 1 GB = 10^9 bytes  
@@ -69,8 +68,8 @@ Horas=2×106s3600s/h --> 555.6h
 
 Resultado: 556 horas de vídeo HD a 2 Mbps.  
 
-### Red: Tienes una línea de 100 Mbps simétricos. ¿Cuántos usuarios podrían ver el perfil  
-### "Móvil" (400 kbps) simultáneamente antes de saturar el 80% de la línea?  
+**Red: Tienes una línea de 100 Mbps simétricos. ¿Cuántos usuarios podrían ver el perfil  
+"Móvil" (400 kbps) simultáneamente antes de saturar el 80% de la línea?** 
 
 Paso 1: Calcular el 80% de 100 Mbps  
 100 Mbps × 0.8 = 80 Mbps  
