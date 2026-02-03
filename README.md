@@ -129,11 +129,13 @@ Formato que agrupa:
 - Audio
 - Subtítulos
 - Metadatos
-
-#PRACTICA 1
-![1](imagenes/1.png)
   
 Ejemplos: MP4, MKV, MOV, OGG.
+
+
+#PRACTICA 1
+![1](Imagenes/1.png)
+  
 
 ## Cálculo de peso sin compresión: Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
 ## Con compresión: Peso = Bitrate × Tiempo
