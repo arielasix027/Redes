@@ -29,6 +29,18 @@ Ahora hazlo en H.265 con el mismo bitrate:
 ffmpeg -i original.mp4 -c:v libx265 -b:v 2M -c:a copy
 h265_2mbps.mp4
 
+### Paso 5 --> Simulación de streaming con diferentes tipos de fichero.
+
+1. Low (móvil) --> ffmpeg -i original.mp4 -c:v libx264 -b:v 400k -vf scale=-1:240 -c:a aac -b:a 64k low_240p_400k.mp4
+
+Resolución 240p
+Bitrate: 400k
+
+3. High (fibra) --> ffmpeg -i original.mp4 -c:v libx264 -b:v 2M -vf scale=1920:1080 -c:a aac -b:a 128k high_1080p_2M.mp4
+
+Resolución: 1080p
+Bitrate: 2Mbps
+
 Reproduce ambos vídeos a la vez. Pon pausa en una escena con mucho movimiento.
 ● ¿Cuál de los dos presenta más "artefactos" (cuadraditos)?
 H.264 muestra más artefactos ya que HEVC es un códec más moderno y eficiente.
