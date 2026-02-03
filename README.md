@@ -3,7 +3,6 @@
 ## Introducción
 El streaming permite transmitir audio o vídeo en tiempo real sin necesidad de descargar el archivo completo. Este documento resume los conceptos fundamentales sobre topologías de red, protocolos, QoS, códecs y funcionamiento general de sistemas de streaming como Icecast2.
 
-
 # 1. Descarga Directa vs Streaming
 
 ## Descarga directa
@@ -18,7 +17,6 @@ El streaming permite transmitir audio o vídeo en tiempo real sin necesidad de d
 - Solo se transmite lo que el usuario consume.
 - Eficiente y adecuado para tiempo real.
 
-
 # 2. Topologías de Red
 
 ## Unicast
@@ -32,7 +30,6 @@ El streaming permite transmitir audio o vídeo en tiempo real sin necesidad de d
 - Los routers replican solo si hay suscriptores.
 - Limitado a redes internas (muchos routers bloquean multicast).
 
-
 # 3. Capa de Transporte: TCP vs UDP
 
 ## TCP
@@ -44,7 +41,6 @@ El streaming permite transmitir audio o vídeo en tiempo real sin necesidad de d
 - No hay retransmisión.
 - Latencia mínima.
 - Puede perder calidad si hay paquetes perdidos.
-
 
 # 4. QoS: Jitter y Buffer
 
@@ -62,13 +58,11 @@ Memoria temporal que almacena segundos de audio/vídeo.
 - El buffer del cliente se llena casi instantáneamente.
 - Reduce el *time-to-first-byte*.
 
-
 # 5. Protocolos de Streaming
 
 ## 5.1. Capa de transporte
 - TCP: calidad y compatibilidad.
 - UDP: mínima latencia.
-
 
 ## 5.2. Capa de aplicación
 
@@ -84,23 +78,6 @@ Memoria temporal que almacena segundos de audio/vídeo.
 - Formatos: `.ts`, `.m4s`.
 - Excelente para CDN.
 
-### 3. Real-Time
-- **RTMP:** ingesta (OBS → YouTube/Twitch).
-- **RTSP:** cámaras IP, CCTV. UDP para datos, TCP para control.
-- **WebRTC:** videollamadas. P2P, UDP, cifrado, muy baja latencia.
-
-
-## 5.3. Cuadro resumen
-
-| Protocolo | Base | Latencia | Uso | Firewall | CDN |
-|----------|------|----------|------|----------|------|
-| Icecast (ICY) | TCP/HTTP | 10–30 s | Radio online | Muy fácil | Difícil |
-| HLS / DASH | TCP/HTTP | 15–45 s | Streaming VOD | Muy fácil | Excelente |
-| RTMP | TCP | 2–5 s | Ingesta | Medio | No |
-| WebRTC | UDP/TCP | <0.5 s | Videollamadas | Complejo | No |
-| RTSP | UDP+TCP | <1 s | CCTV | Problemas NAT | No |
-
-
 # 6. Icecast2
 
 Icecast2 es un servidor de streaming de código abierto que actúa como una “antena virtual”.  
@@ -111,7 +88,6 @@ Recibe audio de una fuente (Mixxx, Butt, etc.) y lo distribuye a múltiples oyen
 - Gestión de oyentes.
 - Puntos de montaje (ej. `/radio-asir`, `/radio-smr`).
 - Compatible con navegadores, VLC y apps móviles.
-
 
 # 7. Códecs de Audio
 
@@ -124,7 +100,6 @@ Recibe audio de una fuente (Mixxx, Butt, etc.) y lo distribuye a múltiples oyen
 - No eliminan información.
 - Menor compresión.
 - Ejemplos: FLAC, WAV.
-
 
 # 8. Parámetros de Audio
 
@@ -139,15 +114,12 @@ Recibe audio de una fuente (Mixxx, Butt, etc.) y lo distribuye a múltiples oyen
 ## Canales
 - Mono, Estéreo, 5.1, etc.
 
-
 # 9. Cálculo de Peso (Audio)
 
 ### Fórmula:Peso = Frecuencia × Bits × Canales × Segundos
 
 Ejemplo WAV sin compresión (3 min, 44.1 kHz, 16 bit, estéreo):  
 ≈ **31.75 MB**
-
----
 
 # 10. Vídeo: Conceptos Clave
 
@@ -158,22 +130,10 @@ Formato que agrupa:
 - Subtítulos
 - Metadatos
 
+#PRACTICA 1
+![1](imagenes/foto.png)
+  
 Ejemplos: MP4, MKV, MOV, OGG.
-
----
 
 ## Cálculo de peso sin compresión: Peso = (Ancho × Alto) × Profundidad de color × FPS × Tiempo
 ## Con compresión: Peso = Bitrate × Tiempo
-
-
-## Bitrates recomendados
-
-| Resolución | Calidad | Mínimo | Recomendado |
-|-----------|---------|--------|-------------|
-| 4K | Ultra HD | 15 Mbps | 25–45 Mbps |
-| 1080p | Alta | 4 Mbps | 6–9 Mbps |
-| 720p | Media | 1.5 Mbps | 3–4 Mbps |
-| 480p | SD | 500 kbps | 1 Mbps |
-| 360p | Baja | 400 kbps | 700 kbps |
-
-
