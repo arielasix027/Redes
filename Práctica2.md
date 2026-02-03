@@ -60,8 +60,8 @@ Paso 1: Pasar 500 GB a bits
 500 × 10^9 bytes × 8 = 4 × 10^12 bits  
 
 Paso 2: Usar el bitrate de 2 Mbps  
-2 Mbps = 2 × 10 6 bits/s  
-Tiempo en segundos = 4 × 10 12 bits 2 × 10 6 bits/s = 2 × 10 6 s  
+2 Mbps = 2 × 10^6 bits/s  
+Tiempo en segundos = 4 × 10^12 bits 2 × 10^6 bits/s = 2 × 10^6s  
 
 Paso 3: Pasar segundos a horas  
 Horas=2×106s3600s/h --> 555.6h  
@@ -78,7 +78,7 @@ Paso 2: Pasar 400 kbps a Mbps
 400 kbps = 0.4 Mbps  
 
 Paso 3: Dividir el ancho de banda disponible entre el consumo por usuario  
-Usuarios = 80 Mbps 0.4 Mbps = 200  
+Usuarios = 80 Mbps / 0.4 Mbps = 200  
 
 Resultado: 200 usuarios simultáneos con el perfil Móvil de 400 kbps.  
 
