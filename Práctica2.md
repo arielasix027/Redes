@@ -13,3 +13,5 @@ Comando instalación --> sudo apt install icecast2 vlc
 ### Paso 3 --> Configuramos el destino Icecast
 
 Seleccionamos new destination: Icecast y configuramos el stream output.
+
+![1](Imagenes/8.png)
