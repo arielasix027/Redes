@@ -88,4 +88,3 @@ Resultado: 200 usuarios simultáneos con el perfil Móvil de 400 kbps.
 ![1](Imagenes/8.png)
 ![1](Imagenes/9.png)
 ![1](Imagenes/10.png)
-![1](Imagenes/11.png)
