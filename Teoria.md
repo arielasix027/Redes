@@ -191,5 +191,5 @@ Ejemplo: 6 Mbps en una línea de 20 Mbps → ( 6 / 20 ) × 100 = 30 %
 ### CÁLCULO DE BITRATE (AUDIO RAW)  
 
 Bitrate de un audio sin comprimir:   
-**Fórmula:Bitrate = Frecuencia × Bits × Canales**   
+**Fórmula: Bitrate = Frecuencia × Bits × Canales**   
 Ejemplo: 48 000 × 24 × 1 = 1 152 000 bits/s = 1.152 Mbps  
