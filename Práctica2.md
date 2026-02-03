@@ -1,20 +1,21 @@
 # Práctica de Vídeo (FFmpeg, códecs, remuxing, bitrate…)
 
-### Paso 1 --> Instalamos icecast2 y vlc.
+### Paso 1 --> Instalar icecast2 y vlc
 
 Comando instalación --> sudo apt install icecast2 vlc
 
 ![1](Imagenes/6.png)
 
-### Paso 2 --> Configuramos vlc para emitir a Icecast.
+### Paso 2 --> Analizar el vídeo con ffprobe
 
 ![1](Imagenes/7.png)
 
-### Paso 3 --> Configuramos el destino Icecast
+### Paso 3 --> 
 
-Seleccionamos new destination: Icecast y configuramos el stream output.
+
 
 ![1](Imagenes/8.png)
+
 
 ### Preguntas finales:
 
