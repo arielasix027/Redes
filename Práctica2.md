@@ -1,8 +1,8 @@
 # Práctica de Vídeo (FFmpeg, códecs, remuxing, bitrate…)
 
-### Paso 1 --> Instalar icecast2 y vlc
+### Paso 1 --> Instalar FFmpeg
 
-Comando instalación --> sudo apt install icecast2 vlc  
+Comando instalación --> sudo apt install ffmpeg
 
 ### Paso 2 --> Analizar el vídeo con ffprobe
 
