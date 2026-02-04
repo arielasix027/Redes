@@ -169,19 +169,19 @@ Si hay límite del 80%: 𝐵 𝑊 𝑢 𝑠 𝑎 𝑏 𝑙 𝑒 = 𝐵 𝑊 𝑡
 
 **Unidades de almacenamiento**  
 *1 byte = 8 bits 
-*1 KB = 10 3 bytes  
-*1 MB = 10 6 bytes  
-*1 GB = 10 9 bytes  
-*1 TB = 10 12 bytes  
+*1 KB = 10^3 bytes  
+*1 MB = 10^6 bytes  
+*1 GB = 10^9 bytes  
+*1 TB = 10^12 bytes  
 
 **Unidades de velocidad**  
-1 kbps = 10 3 bits/s  
-1 Mbps = 10 6 bits/s  
-1 Gbps = 10 9 bits/s  
+1 kbps = 10^3 bits/s  
+1 Mbps = 10^6 bits/s  
+1 Gbps = 10^9 bits/s  
 
 **Conversión rápida**  
-*MB → bits: × 8 × 10 6  
-*GB → bits: × 8 × 10 9  
+*MB → bits: × 8 × 10^6  
+*GB → bits: × 8 × 10^9  
 *kbps → Mbps: ÷ 1000  
 *Segundos → horas: ÷ 3600  
 
@@ -196,4 +196,4 @@ Ejemplo: 6 Mbps en una línea de 20 Mbps → ( 6 / 20 ) × 100 = 30 %
 
 Bitrate de un audio sin comprimir:   
 **Fórmula: Bitrate = Frecuencia × Bits × Canales**   
-Ejemplo: 48 000 × 24 × 1 = 1 152 000 bits/s = 1.152 Mbps  
+Ejemplo: 48000Hz × 24bits × 1 = 1.152.000 bits/s = 1.152 Mbps  
