@@ -168,7 +168,7 @@ Si hay límite del 80%: 𝐵 𝑊 𝑢 𝑠 𝑎 𝑏 𝑙 𝑒 = 𝐵 𝑊 𝑡
 **Fórmula: Peso = Bitrate × Tiempo**  
 
 **Unidades de almacenamiento**  
-*1 byte = 8 bits 
+*1 byte = 8 bits   
 *1 KB = 10^3 bytes  
 *1 MB = 10^6 bytes  
 *1 GB = 10^9 bytes  
