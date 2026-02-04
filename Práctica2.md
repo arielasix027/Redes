@@ -57,14 +57,16 @@ Paso 1: Pasar 500 GB a bits
 1 GB = 10^9 bytes  
 1 byte = 8 bits  
 500 GB = 500 × 10^9 bytes  
-500 × 10^9 bytes × 8 = 4 × 10^12 bits  
+500 × 10^9 bytes × 8 = 4 × 10^12 bits --> 500 GB en bits
 
 Paso 2: Usar el bitrate de 2 Mbps  
-2 Mbps = 2 × 10^6 bits/s  
+2 Mbps = 2 × 10^6 bits/s  --> megabit a bit (1Mb = 10^6)
+
+Tiempo = datos / velocidad.
 Tiempo en segundos = (4 × 10^12 bits) / (2 × 10^6 bits/s) = 2 × 10^6s  
 
 Paso 3: Pasar segundos a horas  
-Horas=2×106s3600s/h --> 555.6h  
+Horas= 2× 10^6s / 3600s/h --> 555.6h  
 
 Resultado: 556 horas de vídeo HD a 2 Mbps.  
 
