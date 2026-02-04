@@ -185,96 +185,94 @@ Si hay límite del 80%: 𝐵 𝑊 𝑢 𝑠 𝑎 𝑏 𝑙 𝑒 = 𝐵 𝑊 𝑡
 *kbps → Mbps: ÷ 1000  
 *Segundos → horas: ÷ 3600  
 
-### CÁLCULO DE PORCENTAJE DE USO DE LÍNEA
+### CÁLCULO DE PORCENTAJE DE USO DE LÍNEA  
 **Fórmula: Porcentaje = (Bitrate / Capacidad_total) × 100**  
 Ejemplo: 6 Mbps en una línea de 20 Mbps → ( 6 / 20 ) × 100 = 30 %  
 
-### CÁLCULO DE RESOLUCIÓN
-**Fórmula: Pixels_por_frame = Ancho × Alto**
+### CÁLCULO DE RESOLUCIÓN  
+**Fórmula: Pixels_por_frame = Ancho × Alto**  
 
 ### CÁLCULO DE BITRATE (AUDIO RAW)  
 Bitrate de un audio sin comprimir:   
 **Fórmula: Bitrate = Frecuencia × Bits × Canales**   
 Ejemplo: 48000Hz × 24bits × 1 = 1.152.000 bits/s = 1.152 Mbps  
 
-# EJERCICIOS DE PRÁCTICA
-### Peso de un audio WAV de 7 minutos**
-**Datos: 44.1 kHz, 16 bits, estéreo, 7 min.**
+# EJERCICIOS DE PRÁCTICA  
+### Peso de un audio WAV de 7 minutos**  
+**Datos: 44.1 kHz, 16 bits, estéreo, 7 min.**  
 
-**Bitrate RAW**
-44 100×16×2=1 411 200 bits/s
+**Bitrate RAW**  
+44 100×16×2=1 411 200 bits/s  
 
-**Peso total**
-1 411 200×420=592 704 000 bits
+**Peso total**  
+1 411 200×420=592 704 000 bits  
 
-**Pasar a MB**
-592 704 0008=74 088 000 bytes
-74 088 000/106=74.1 MB
+**Pasar a MB**  
+592 704 0008=74 088 000 bytes  
+74 088 000/106=74.1 MB  
+Resultado: ≈ 74 MB.  
 
-Resultado: ≈ 74 MB.
-
-### Ancho de banda total para 80 oyentes a 96 kbps
-**Bitrate por usuario**
-96 kbps=96 000 bits/s
+### Ancho de banda total para 80 oyentes a 96 kbps  
+**Bitrate por usuario**  
+96 kbps=96 000 bits/s  
 
 **BW total**
-96 000×80=7 680 000 bits/s = 7.68 Mbps
+96 000×80=7 680 000 bits/s = 7.68 Mbps  
+Resultado: 7.68 Mbps.  
 
-Resultado: 7.68 Mbps.
+### Bitrate de audio RAW 96 kHz, 24 bits, estéreo  
+**Bitrate**  
+96 000×24×2=4 608 000 bits/s = 4.608 Mbps  
+Resultado: 4.608 Mbps.  
 
-### Bitrate de audio RAW 96 kHz, 24 bits, estéreo
-**Bitrate**
-96 000×24×2=4 608 000 bits/s = 4.608 Mbps
-Resultado: 4.608 Mbps.
+### Vídeo RAW 1080p, 30 fps, 24 bits — 1 minuto  
+**Pixels por frame**  
+1920×1080=2 073 600  
 
-### Vídeo RAW 1080p, 30 fps, 24 bits — 1 minuto
-**Pixels por frame**
-1920×1080=2 073 600
+**Bitrate RAW**  
+2 073 600×24×30=1 492 992 000 bits/s ≈ 1.49 Gbps  
 
-**Bitrate RAW**
-2 073 600×24×30=1 492 992 000 bits/s ≈ 1.49 Gbps
-
-**Peso en 60 s**
-1.49×109×60=8.94×1010 bits
-
-**Pasar a GB**
-8.94×10108=1.1175×1010 bytes
-=11.17 GB
-
-Resultado: ≈ 11.2 GB por minuto.
-
-### ¿Cuántos usuarios pueden ver un stream de 2 Mbps con 50 Mbps?
-Si cada usuario consume 2Mbps caben 25 usuarios ya que el servidor tiene 50Mbps disponibles.
-50/2 = 25 --> Resultado: 25 usuarios.
-
-### Porcentaje de uso de línea
-Enunciado: Emites a 5 Mbps en una línea de 20 Mbps.
-Formula de porcentaje -> porcentaje = (uso/capacidad total) x100
-520×100=25% --> Resultado: 25% de uso.
-
-### Peso de un vídeo comprimido
-Enunciado: Bitrate 4 Mbps, duración 12 minutos.
-
-**Paso 1: Pasar 12 min a segundos**
-12×60=720 s
-
-**Peso**
-4×106×720=2.88×109 bits
+**Peso en 60 s**  
+1.49×109×60=8.94×1010 bits  
 
 **Pasar a GB**
-2.88×1098=360 000 000 bytes = 0.36 GB
+8.94×10108=1.1175×1010 bytes  
+=11.17 GB  
 
-Resultado ≈ 0.36 GB.
+Resultado: ≈ 11.2 GB por minuto.  
 
-### ¿Cuántos minutos de vídeo 720p (3 Mbps) caben en 128 GB?
-**Paso 1: Convertir 128 GB a bits**
-128×109×8=1.024×1012 bits
+### ¿Cuántos usuarios pueden ver un stream de 2 Mbps con 50 Mbps?  
+Si cada usuario consume 2Mbps caben 25 usuarios ya que el servidor tiene 50Mbps disponibles.  
+50/2 = 25 --> Resultado: 25 usuarios.  
 
-**Paso 2: Dividir entre 3 Mbps**
-1.024×10123×106=341 333 s
+### Porcentaje de uso de línea  
+Enunciado: Emites a 5 Mbps en una línea de 20 Mbps.  
+Formula de porcentaje -> porcentaje = (uso/capacidad total) x100  
+520×100=25% --> Resultado: 25% de uso.  
 
-**Paso 3: Pasar a horas**
-341 3333600=94.8 h
+### Peso de un vídeo comprimido  
+Enunciado: Bitrate 4 Mbps, duración 12 minutos.  
 
-Resultado ≈ 95 horas de vídeo 720p.
+**Paso 1: Pasar 12 min a segundos**  
+12×60=720 s  
+
+**Peso**  
+4×106×720=2.88×109 bits  
+
+**Pasar a GB**  
+2.88×1098=360 000 000 bytes = 0.36 GB  
+
+Resultado ≈ 0.36 GB.  
+
+### ¿Cuántos minutos de vídeo 720p (3 Mbps) caben en 128 GB?  
+**Paso 1: Convertir 128 GB a bits**  
+128×109×8=1.024×1012 bits  
+
+**Paso 2: Dividir entre 3 Mbps**  
+1.024×10123×106=341 333 s  
+
+**Paso 3: Pasar a horas**  
+341 3333600=94.8 h  
+
+Resultado ≈ 95 horas de vídeo 720p.  
 
