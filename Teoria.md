@@ -158,7 +158,7 @@ Igual que en audio comprimido.
 
 ### ANCHO DE BANDA TOTAL (STREAMING)
 **Fórmula: BW_total = Bitrate_stream × Número_de_usuarios**    
-Ejemplo:128 kbps × 25 usuarios = 3.2 Mbps  
+Ejemplo: 128 kbps × 25 usuarios = 3.2 Mbps  
 
 ### CÁLCULO DE USUARIOS MÁXIMOS
 **Fórmula: Usuarios = BW_disponible / Bitrate_por_usuario**      
